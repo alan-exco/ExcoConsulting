@@ -185,6 +185,13 @@ footer .contact a:hover{color:var(--gold)}
 .legal{width:100%;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-family:var(--disp);font-stretch:90%;font-size:15px;color:#8E9692}
 
 /* motion: one moment, the drill going down */
+.tools{font-family:var(--disp);font-weight:850;font-stretch:118%;font-size:clamp(24px,2.6vw,38px);line-height:1.05;letter-spacing:-.02em;color:var(--red);margin:0 0 14px}
+.split{position:relative}
+.split .dat{display:flex}
+.split .inner{display:flex;flex-direction:column}
+.split .pay{margin-top:auto;padding-top:40px;font-family:var(--disp);font-weight:850;font-stretch:118%;font-size:clamp(20px,1.8vw,26px);line-height:1.2;letter-spacing:-.02em;color:#fff}
+.split .exp .pay{text-align:right}
+.split-arrow{position:absolute;left:50%;width:70px;height:14px;transform:translateX(-50%);bottom:calc(clamp(56px,7vw,96px) + clamp(20px,1.8vw,26px) * .6 - 7px)}
 @media (prefers-reduced-motion:no-preference){
   .drill{stroke-dasharray:900;stroke-dashoffset:900;animation:drill 2.2s cubic-bezier(.55,0,.25,1) .3s forwards}
   .ore-hit{opacity:0;animation:hit .6s ease 2.3s forwards}
@@ -197,6 +204,9 @@ footer .contact a:hover{color:var(--gold)}
 
 /* responsive */
 @media (max-width:1080px){
+.split-arrow{display:none}
+.split .exp .pay{text-align:left}
+
   nav{display:none}
   .hero-grid{min-height:0;display:block}
   .hero-copy{padding-bottom:20px}
@@ -259,7 +269,8 @@ footer .contact a:hover{color:var(--gold)}
     <div class="hero-copy">
       <p class="tag">Mining operations leadership, Perth WA</p>
       <h1>Every challenge hides an opportunity.</h1>
-      <p class="lede">Senior mining leaders who bring operations experience paired with performance data you can trust to lift results.</p>
+      <p class="tools">The tools are ready. Are you?</p>
+      <p class="lede">Spend less time reviewing and correcting reports and more time adding value.</p>
       <div class="hero-actions">
         <a class="btn btn-hv" href="mailto:alanbreen@excoconsulting.com.au?subject=Book%20a%20call">Book a call</a>
         <a class="btn btn-ghost" href="#approach">How we work</a>
@@ -267,7 +278,7 @@ footer .contact a:hover{color:var(--gold)}
     </div>
     <div class="section-svg" aria-hidden="true">
       <svg viewBox="0 0 600 820" preserveAspectRatio="xMidYMid slice">
-        <rect width="600" height="820" fill="#ECEBE6"/>
+        <rect width="600" height="820" fill="#A8D4EC"/>
         <!-- strata -->
         <path d="M0 96 C 120 80, 240 112, 360 98 S 540 84, 600 92 V 820 H0Z" fill="#A23E1E"/>
         <path d="M0 270 C 140 250, 260 300, 400 276 S 560 248, 600 262 V 820 H0Z" fill="#C98A3B"/>
@@ -288,7 +299,7 @@ footer .contact a:hover{color:var(--gold)}
         <g>
           <line x1="300" y1="180" x2="330" y2="180" stroke="#fff" stroke-width="2"/><text class="xs-label l1" x="338" y="186">The symptom</text>
           <line x1="300" y1="360" x2="330" y2="360" stroke="#20272B" stroke-width="2"/><text class="xs-label dark l2" x="338" y="366">The noise</text>
-          <line x1="300" y1="530" x2="330" y2="530" stroke="#fff" stroke-width="2"/><text class="xs-label l3" x="338" y="536">The real problem</text>
+          <line x1="300" y1="530" x2="330" y2="530" stroke="#fff" stroke-width="2"/><text class="xs-label l3" x="338" y="536">The root cause</text>
           <text class="xs-label dark l4" x="232" y="778" style="fill:#fff">The opportunity</text>
         </g>
         <!-- hexagon marker at the hit (the logo) -->
@@ -327,13 +338,17 @@ footer .contact a:hover{color:var(--gold)}
 <section class="split" aria-label="Experience and data">
   <div class="exp"><div class="inner">
     <h2>Experience and data.</h2>
-    <p class="small">Judgement to find the real problem beneath the noise.</p>
+    <p class="small">Principals who have run mining operations, not just advised on them.</p>
+    <div class="partner">Culture change partner<b>ExcoConsulting</b></div>
+    <p class="pay">Culture change</p>
   </div></div>
   <div class="dat"><div class="inner">
     <h2>Not one without the other.</h2>
     <p class="small">Trusted, real-time performance data where the decisions are made.</p>
     <div class="partner">Technology partner<b>5accel SWITCH Mining</b></div>
+    <p class="pay">Data pay off</p>
   </div></div>
+  <svg class="split-arrow" viewBox="0 0 70 14" aria-hidden="true"><polygon points="1,7 9,1 9,5 61,5 61,1 69,7 61,13 61,9 9,9 9,13" fill="#CFA24B" fill-opacity=".5" stroke="#CFA24B" stroke-opacity=".85" stroke-width="1" stroke-linejoin="round"/></svg>
 </section>
 
 <!-- INTRO -->
